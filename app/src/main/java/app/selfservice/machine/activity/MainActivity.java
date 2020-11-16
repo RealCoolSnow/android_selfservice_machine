@@ -1,16 +1,15 @@
 package app.selfservice.machine.activity;
 
-import android.content.Intent;
 import android.widget.Toast;
 
-import app.tv.network.BaseObserver;
-import app.tv.network.RxScheduler;
-import app.tv.network.bean.BaseResp;
 import app.selfservice.machine.api.bean.req.HelloReq;
 import app.selfservice.machine.api.bean.resp.HelloResp;
 import app.selfservice.machine.base.BaseActivity;
 import app.selfservice.machine.databinding.ActivityMainBinding;
 import app.selfservice.machine.network.RetrofitFactory;
+import app.tv.network.BaseObserver;
+import app.tv.network.RxScheduler;
+import app.tv.network.bean.BaseResp;
 import io.reactivex.Observable;
 
 
@@ -18,9 +17,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
     @Override
     protected void initView() {
-        binding.btnAppList.setOnClickListener(view -> {
-            startActivity(new Intent(MainActivity.this, AppInstalledActivity.class));
-        });
         binding.btnHttpTest.setOnClickListener(view -> httpTest());
     }
 
